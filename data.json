@@ -4,7 +4,6 @@
     "title": "Learning Singleton Pattern",
     "description": "I would like to learn singleton in JS, its important",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 3,
     "timeToFinish": 120,
     "status": "active"
@@ -14,7 +13,6 @@
     "title": "Resource 2",
     "description": "Resource 2 Desc",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 2,
     "timeToFinish": 60,
     "status": "inactive"
@@ -24,7 +22,6 @@
     "title": "Resource 3",
     "description": "Resource 3 Desc",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 1,
     "timeToFinish": 30,
     "status": "inactive"
@@ -34,7 +31,6 @@
     "title": "Resource 4",
     "description": "Resource 4 Desc",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 1,
     "timeToFinish": 30,
     "status": "inactive"
@@ -44,7 +40,6 @@
     "title": "Resource 5",
     "description": "Resource 5 Desc",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 1,
     "timeToFinish": 30,
     "status": "inactive"
@@ -54,7 +49,6 @@
     "title": "Resource 6",
     "description": "Resource 6 Desc",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 1,
     "timeToFinish": 30,
     "status": "inactive"
@@ -64,7 +58,6 @@
     "title": "Resource 7",
     "description": "Resource 7 Desc",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 1,
     "timeToFinish": 30,
     "status": "inactive"
@@ -74,7 +67,6 @@
     "title": "Resource 8",
     "description": "Resource 8 Desc",
     "link": "https://link.com",
-    "image": "https://image.com",
     "priority": 1,
     "timeToFinish": 30,
     "status": "inactive"
