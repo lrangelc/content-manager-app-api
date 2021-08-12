@@ -9,6 +9,8 @@ const pathToFile = path.resolve('./data.json');
 
 const getResources = () => JSON.parse(fs.readFileSync(pathToFile));
 
+app.use(express.json());
+
 const corsOptions = {
   origin: 'http://localhost:3000',
   optionSuccessStatus: 200,
@@ -25,6 +27,14 @@ app.get('/api/resources', (req, res) => {
 
   console.log('From the code!');
   res.send(resources);
+});
+
+app.post('/api/resources', (req, res) => {
+  // const resources = getResources();
+
+  console.log('Data has been received to POST endpoint');
+  console.log(req.body);
+  res.send('Data has been received');
 });
 
 app.listen(PORT, () => {
