@@ -30,11 +30,25 @@ app.get('/api/resources', (req, res) => {
 });
 
 app.post('/api/resources', (req, res) => {
-  // const resources = getResources();
+  const resources = getResources();
 
   console.log('Data has been received to POST endpoint');
   console.log(req.body);
-  res.send('Data has been received');
+
+  const resource = req.body;
+
+  resource.createdAt = new Date();
+  resource.status = 'inactive';
+  resource.id = Date.now().toString();
+  resources.unshift(resource);
+
+  fs.writeFile(pathToFile, JSON.stringify(resources, null, 2), (err) => {
+    if (err) {
+      return res.status(422).send('Cannot store data in the file!');
+    }
+
+    return res.send('Data has been saved!');
+  });
 });
 
 app.listen(PORT, () => {
