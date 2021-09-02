@@ -59,6 +59,22 @@ app.post('/api/resources', (req, res) => {
   });
 });
 
+app.patch('/api/resources/:id', (req, res) => {
+  const resources = getResources();
+  const { id } = req.params;
+  const index = resources.findIndex((resource) => resource.id === id);
+
+  resources[index] = req.body;
+
+  fs.writeFile(pathToFile, JSON.stringify(resources, null, 2), (err) => {
+    if (err) {
+      return res.status(422).send('Cannot store data in the file!');
+    }
+
+    return res.send('Data has been updated!');
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);
   console.log(`ready - started server on 0.0.0.0:${PORT}, url: http://localhost:${PORT}`);
